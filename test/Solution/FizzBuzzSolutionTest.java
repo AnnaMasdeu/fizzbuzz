@@ -1,18 +1,20 @@
-import fizzbuzz.FizzBuzz;
-import fizzbuzz.NonPositiveNumberException;
+package Solution;
+
+import fizzbuzz.Solution.FizzBuzzSolution;
+import fizzbuzz.Solution.NonPositiveNumberException;
 import org.junit.Test;
 
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
-public class FizzBuzzTest {
+public class FizzBuzzSolutionTest {
     @Test
     public void shouldReturnFizzWhenNumberIsMultipleOf3() throws NonPositiveNumberException {
         int number = 3;
 
-        FizzBuzz fizzBuzz = new FizzBuzz();
+        FizzBuzzSolution fizzBuzzSolution = new FizzBuzzSolution();
 
-        String convertedNumber = fizzBuzz.convert(number);
+        String convertedNumber = fizzBuzzSolution.convert(number);
 
         assertThat(convertedNumber, is("fizz"));
     }
@@ -21,9 +23,9 @@ public class FizzBuzzTest {
     public void shouldReturnBuzzWhenNumberIsMultipleOf5() throws NonPositiveNumberException {
         int number = 5;
 
-        FizzBuzz fizzBuzz = new FizzBuzz();
+        FizzBuzzSolution fizzBuzzSolution = new FizzBuzzSolution();
 
-        String convertedNumber = fizzBuzz.convert(number);
+        String convertedNumber = fizzBuzzSolution.convert(number);
 
         assertThat(convertedNumber, is("buzz"));
     }
@@ -32,9 +34,9 @@ public class FizzBuzzTest {
     public void shouldReturnFizzBuzzWhenNumberIsMultipleOf3And5() throws NonPositiveNumberException {
         int number = 15;
 
-        FizzBuzz fizzBuzz = new FizzBuzz();
+        FizzBuzzSolution fizzBuzzSolution = new FizzBuzzSolution();
 
-        String convertedNumber = fizzBuzz.convert(number);
+        String convertedNumber = fizzBuzzSolution.convert(number);
 
         assertThat(convertedNumber, is("fizzbuzz"));
     }
@@ -43,9 +45,9 @@ public class FizzBuzzTest {
     public void shouldReturnFizzBuzzWhenNumberIs0() throws NonPositiveNumberException {
         int number = 0;
 
-        FizzBuzz fizzBuzz = new FizzBuzz();
+        FizzBuzzSolution fizzBuzzSolution = new FizzBuzzSolution();
 
-        String convertedNumber = fizzBuzz.convert(number);
+        String convertedNumber = fizzBuzzSolution.convert(number);
 
         assertThat(convertedNumber, is("fizzbuzz"));
     }
@@ -54,8 +56,8 @@ public class FizzBuzzTest {
     public void shouldNotReturnNeitherFizzOrBuzzIfNumberIsNegative() throws NonPositiveNumberException {
         int number = -1;
 
-        FizzBuzz fizzBuzz = new FizzBuzz();
+        FizzBuzzSolution fizzBuzzSolution = new FizzBuzzSolution();
 
-        fizzBuzz.convert(number);
+        fizzBuzzSolution.convert(number);
     }
 }

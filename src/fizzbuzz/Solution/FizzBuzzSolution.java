@@ -1,6 +1,6 @@
-package fizzbuzz;
+package fizzbuzz.Solution;
 
-public class FizzBuzz {
+public class FizzBuzzSolution {
     public String convert(int number) throws NonPositiveNumberException {
         if (isNegative(number)) {
             throw new NonPositiveNumberException();
